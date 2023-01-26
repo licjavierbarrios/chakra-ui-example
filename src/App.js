@@ -1,25 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import { Box, Button } from '@chakra-ui/react';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+			<Box bg="brand.primary">Hola Mundo</Box>
+			<Button>Boton 1</Button>
+			<Button m={2} colorScheme="teal" size="lg">
+				Boton 2
+			</Button>
+			<Button variant="outline" m={2} colorScheme="teal" size="lg">
+				Boton 3
+			</Button>
+			<Button variant="cta" m={2} colorScheme="teal" size="lg">
+				Boton 4
+			</Button>
+		</div>
+	);
 }
 
 export default App;

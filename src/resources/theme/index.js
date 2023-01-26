@@ -1,45 +1,69 @@
-import { extendTheme } from '@chakra-ui/react';
+import { extendTheme } from "@chakra-ui/react";
 
-const colors = {
-	brand: {
-		primary: '#F2D7EE',
-		secondary: '#0E103D',
-		accent: '#69306D',
+const styles = {
+	global: {
+		"html, body": {
+			color: "white",
+			bg: "purple.900",
+		},
 	},
 };
 
-const Button = {
-	baseStyle: {
-		fontWeight: 'light',
-		borderRadius: '30px',
-		_hover: {
-			boxShadow: '5px 5px 15px 5px rgba(0, 0, 0, 0.18)',
-		},
-	},
+const fonts = {
+	heading: "Roboto, sans-serif",
+	body: "Roboto, sans-serif",
+};
+
+const Heading = {
 	variants: {
-		outline: {
-			_hover: {
-				bg: 'brand.primary',
-				borderColor: 'brand.primary',
+		primary: {
+			fontWeight: "light",
+			letterSpacing: "5px",
+			_before: {
+				content: '""',
+				display: "block",
+				width: "40px",
+				height: "2px",
+				bg: "purple.300",
 			},
-		},
-		cta: {
-			fontWeight: 'normal',
-			textTransform: 'uppercase',
-			bg: 'brand.accent',
-			color: 'brand.primary',
-			borderRadius: 'none',
-			_hover: {
-				bg: 'brand.primary',
-				color: 'brand.accent',
-			},
-		},
-	},
-	sizes: {
-		lg: {
-			fontWeight: 'bold',
 		},
 	},
 };
 
-export const theme = extendTheme({ colors, components: { Button } });
+export const theme = extendTheme({ styles, fonts, components: { Heading } });
+
+// AppBackup.js
+// const fonts = {
+// 	heading: "Roboto, sans-serif",
+// 	body: "Roboto, sans-serif",
+// };
+
+// const Button = {
+// 	variants: {
+// 		outline: {
+// 			borderRadius: "0",
+// 			textTransform: "uppercase",
+// 			fontWeight: "light",
+// 			letterSpacing: "1px",
+// 			color: "white",
+// 			_hover: {
+// 				bg: "black",
+// 				color: "white",
+// 			},
+// 		},
+// 	},
+// };
+
+// const Heading = {
+// 	variants: {
+// 		banner: {
+// 			fontWeight: "light",
+// 			letterSpacing: "5px",
+// 			color: "white",
+// 			textAlign: "center",
+// 			textTransform: "uppercase",
+// 		},
+// 	},
+// };
+
+// export const theme = extendTheme({ fonts, components: { Button, Heading } });
